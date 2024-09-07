@@ -1,0 +1,6 @@
+vcom -reportprogress 300 -work work ./constants.vhd
+vcom -reportprogress 300 -work work ./registerfile.vhd
+vcom -reportprogress 300 -work work ./tb_registerfile.vhd
+vsim work.cfg_test_rf -t 10ps -voptargs=+acc
+add wave *
+run 160 ns

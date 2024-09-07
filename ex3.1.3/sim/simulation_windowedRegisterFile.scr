@@ -1,0 +1,30 @@
+python3 script_rom_lut_generation.py
+vcom -reportprogress 300 -work work ./constants.vhd
+vcom -reportprogress 300 -work work ./RotRegN.vhd
+vcom -reportprogress 300 -work work ./LUT_ROM.vhd
+vcom -reportprogress 300 -work work ./not2N.vhd
+vcom -reportprogress 300 -work work ./and2N.vhd
+vcom -reportprogress 300 -work work ./or2N.vhd
+vcom -reportprogress 300 -work work ./RegN.vhd
+vcom -reportprogress 300 -work work ./iv.vhd
+vcom -reportprogress 300 -work work ./nd2.vhd
+vcom -reportprogress 300 -work work ./mux21.vhd
+vcom -reportprogress 300 -work work ./muxn1.vhd
+vcom -reportprogress 300 -work work ./UpdateRegN.vhd
+vcom -reportprogress 300 -work work ./FA.vhd
+vcom -reportprogress 300 -work work ./RCA.vhd
+vcom -reportprogress 300 -work work ./RegN.vhd
+vcom -reportprogress 300 -work work ./TC_DETCR.vhd
+vcom -reportprogress 300 -work work ./UpCntN.vhd
+vcom -reportprogress 300 -work work ./RST_ROM.vhd
+vcom -reportprogress 300 -work work ./RETURN_CHECK_LOGIC.vhd
+vcom -reportprogress 300 -work work ./CALL_CHECK_LOGIC.vhd
+vcom -reportprogress 300 -work work ./DP_FSM_WRF.vhd
+vcom -reportprogress 300 -work work ./CU_FSM_WRF.vhd
+vcom -reportprogress 300 -work work ./FSMD_WRF.vhd
+vcom -reportprogress 300 -work work ./registerfile.vhd
+vcom -reportprogress 300 -work work ./windowedRegisterFile.vhd
+vcom -reportprogress 300 -work work ./tb_windowedRegisterFile.vhd
+vsim work.cfg_tb_wrf -t 10ps -voptargs=+acc
+add wave *
+run 10000 ns
