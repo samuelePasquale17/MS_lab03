@@ -1,0 +1,36 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : registerfile_M5
+Version: S-2021.06-SP4
+Date   : Tue May 14 22:32:56 2024
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: Out1_reg[28]
+              (rising edge-triggered flip-flop)
+  Endpoint: Out1[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  registerfile_M5    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Out1_reg[28]/CK (DFF_X1)                 0.00       0.00 r
+  Out1_reg[28]/Q (DFF_X1)                  0.10       0.10 r
+  Out1[28] (out)                           0.00       0.10 r
+  data arrival time                                   0.10
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

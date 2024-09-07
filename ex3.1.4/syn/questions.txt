@@ -1,0 +1,4 @@
+QUESTION 3
+Since the RF and the WRF are two sequential blocks, firstly we have defined a clock signal with a period equal to 2 ns. Once getting the timing report it is possible to notice one main difference: the slack. 
+In the RF given a clock period of 2 ns the slack is 1.55, therefore there is a large degree of freedom and it migth also be possible to reduce the clock constraint to increase the performances of the whole circuit.
+On the other hand, looking at the WRF timing report what can be clearly seen is that, given the same clock constraint, the slack is much more lower (very close to 0... 0.05). This result confirms that the timing constraint is still satisfied since the slack is not negative, but the delay of the critical path is much more high.

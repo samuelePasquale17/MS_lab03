@@ -1,0 +1,33 @@
+analyze -library WORK -format vhdl {constants.vhd}
+analyze -library WORK -format vhdl {LUT_ROM.vhd}
+analyze -library WORK -format vhdl {RotRegN.vhd}
+analyze -library WORK -format vhdl {iv.vhd}
+analyze -library WORK -format vhdl {nd2.vhd}
+analyze -library WORK -format vhdl {mux21.vhd}
+analyze -library WORK -format vhdl {muxn1.vhd}
+analyze -library WORK -format vhdl {not2N.vhd}
+analyze -library WORK -format vhdl {and2N.vhd}
+analyze -library WORK -format vhdl {or2N.vhd}
+analyze -library WORK -format vhdl {RegN.vhd}
+analyze -library WORK -format vhdl {iv.vhd}
+analyze -library WORK -format vhdl {nd2.vhd}
+analyze -library WORK -format vhdl {mux21.vhd}
+analyze -library WORK -format vhdl {muxn1.vhd}
+analyze -library WORK -format vhdl {UpdateRegN.vhd}
+analyze -library WORK -format vhdl {FA.vhd}
+analyze -library WORK -format vhdl {RCA.vhd}
+analyze -library WORK -format vhdl {TC_DETCR.vhd}
+analyze -library WORK -format vhdl {UpCntN.vhd}
+analyze -library WORK -format vhdl {RETURN_CHECK_LOGIC.vhd}
+analyze -library WORK -format vhdl {CALL_CHECK_LOGIC.vhd}
+analyze -library WORK -format vhdl {RST_ROM.vhd}
+analyze -library WORK -format vhdl {DP_FSM_WRF.vhd}
+analyze -library WORK -format vhdl {CU_FSM_WRF.vhd}
+analyze -library WORK -format vhdl {FSMD_WRF.vhd}
+analyze -library WORK -format vhdl {registerfile.vhd}
+analyze -library WORK -format vhdl {windowedRegisterFile.vhd}
+elaborate windowedRegisterFile -architecture ARCHSTRUCT
+create_clock -name "CLK" -period 2 Clk
+report_clock
+compile
+report_timing > reportTimingWRF32bit.txt

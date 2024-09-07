@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : registerfile_M5
+Version: S-2021.06-SP4
+Date   : Tue May 14 22:33:21 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: REGISTERS_reg[15][11]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Out1_reg[11]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  registerfile_M5    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  REGISTERS_reg[15][11]/CK (DFF_X1)        0.00 #     0.00 r
+  REGISTERS_reg[15][11]/QN (DFF_X1)        0.07       0.07 r
+  U5498/ZN (OAI22_X1)                      0.04       0.11 f
+  U4777/ZN (NOR4_X1)                       0.10       0.21 r
+  U4774/ZN (OAI221_X1)                     0.05       0.26 f
+  U5372/ZN (NOR4_X1)                       0.10       0.36 r
+  U5371/ZN (OAI22_X1)                      0.04       0.40 f
+  Out1_reg[11]/D (DFF_X1)                  0.01       0.40 f
+  data arrival time                                   0.40
+
+  clock CLK (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  Out1_reg[11]/CK (DFF_X1)                 0.00       2.00 r
+  library setup time                      -0.04       1.96
+  data required time                                  1.96
+  -----------------------------------------------------------
+  data required time                                  1.96
+  data arrival time                                  -0.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.55
+
+
+1

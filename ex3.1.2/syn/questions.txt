@@ -1,0 +1,6 @@
+QUESTION 1
+In the optimized version, we have a clock period of 2 ns, so we've timing constraints, but the previous critical path was about 0.1 ns, this means that our register was really fast, and so we could reduce and decrease his performance. For this reason, the new critical path is longer in time, about 0.40 ns, because we can decrease the restrict of our critical path.
+In this way, we have a slack of 1.55, that is really good. 
+
+QUESTION 2
+These two paths aren't between two registers, so they don't have any timing constraints, and so they have more freedom than the combinational paths between two registers.
